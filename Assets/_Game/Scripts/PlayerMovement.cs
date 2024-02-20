@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
 
     [SerializeField] 
+    private Animator _animator;
+
+    [SerializeField] 
     private BoxCollider2D _groundCheckCollider;
 
     [SerializeField] 
@@ -20,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     
     private bool _pressedJump;
     private bool _isGrounded;
+    
+    private static readonly int IsGroundedAnimationParameter = Animator.StringToHash("isGrounded");
 
     private void Update()
     {
@@ -58,5 +63,7 @@ public class PlayerMovement : MonoBehaviour
                 groundCheckBounds.max, 
                 _groundLayerMask
             ).Length > 0;
+        
+        _animator.SetBool(IsGroundedAnimationParameter, _isGrounded);
     }
 }
