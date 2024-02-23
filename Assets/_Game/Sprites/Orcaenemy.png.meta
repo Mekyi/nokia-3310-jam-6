@@ -123,127 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Orcaenemy (1)_0
+      name: Orcaenemy_0
       rect:
         serializedVersion: 2
         x: 8
         y: 65
         width: 14
         height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7de0dd4aa8a68c943b1dbbb1248b6e62
-      internalID: -890222204
+      spriteID: e96446301a294c34bb9de760442d57bc
+      internalID: -1245715708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orcaenemy (1)_1
+      name: Orcaenemy_1
       rect:
         serializedVersion: 2
         x: 40
         y: 64
         width: 14
         height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fa6efde7dbf808419238d3de785c086
-      internalID: -510977232
+      spriteID: 8a76e74713fa48344a74ae326a56b03a
+      internalID: -922739605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orcaenemy (1)_2
+      name: Orcaenemy_2
       rect:
         serializedVersion: 2
         x: 5
         y: 32
         width: 20
         height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb40c7ae46834764491d0ceeed3bfeb0
-      internalID: 280632946
+      spriteID: 6b5bae32138572044b07247601ec51e2
+      internalID: 888875803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orcaenemy (1)_3
+      name: Orcaenemy_3
       rect:
         serializedVersion: 2
         x: 37
         y: 32
         width: 20
         height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6c213e6387e90e4fb71e7da8f4d8d97
-      internalID: 2125253586
+      spriteID: fe2cebc6f7394744dbd3270f690b31f6
+      internalID: 1829093707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orcaenemy (1)_4
+      name: Orcaenemy_4
       rect:
         serializedVersion: 2
         x: 5
         y: 0
         width: 21
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f89d2340e0083b4a8ddc1dd5de35bf2
-      internalID: 1979807678
+      spriteID: 9a0eaae745371a74ba093088c41efe71
+      internalID: -643637662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orcaenemy (1)_5
+      name: Orcaenemy_5
       rect:
         serializedVersion: 2
         x: 36
         y: 0
         width: 25
         height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8698cffe2a5d191409360425c8eea760
-      internalID: -1533193146
+      spriteID: 18deae5998860694594c2dfeb35a0a35
+      internalID: -2133229290
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Orcaenemy (1)_0: -890222204
-      Orcaenemy (1)_1: -510977232
-      Orcaenemy (1)_2: 280632946
-      Orcaenemy (1)_3: 2125253586
-      Orcaenemy (1)_4: 1979807678
-      Orcaenemy (1)_5: -1533193146
+      Orcaenemy_0: -1245715708
+      Orcaenemy_1: -922739605
+      Orcaenemy_2: 888875803
+      Orcaenemy_3: 1829093707
+      Orcaenemy_4: -643637662
+      Orcaenemy_5: -2133229290
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
