@@ -126,9 +126,9 @@ TextureImporter:
       name: Walk loop_0
       rect:
         serializedVersion: 2
-        x: 14
+        x: 13
         y: 52
-        width: 9
+        width: 12
         height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -147,9 +147,9 @@ TextureImporter:
       name: Walk loop_1
       rect:
         serializedVersion: 2
-        x: 55
+        x: 53
         y: 52
-        width: 10
+        width: 14
         height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -168,9 +168,9 @@ TextureImporter:
       name: Walk loop_2
       rect:
         serializedVersion: 2
-        x: 15
+        x: 14
         y: 12
-        width: 9
+        width: 11
         height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
