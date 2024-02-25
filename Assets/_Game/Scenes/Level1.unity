@@ -775,6 +775,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &776489609 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1056953658642416345, guid: de6977c66cca61840b1e67cfff5f5202, type: 3}
+  m_PrefabInstance: {fileID: 1954913935122257353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &813844742
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +855,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813844742}
   m_CullTransparentMesh: 1
+--- !u!61 &1120989051 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2553653812695756816, guid: de6977c66cca61840b1e67cfff5f5202, type: 3}
+  m_PrefabInstance: {fileID: 1954913935122257353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1403358025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1056953658642416345, guid: de6977c66cca61840b1e67cfff5f5202, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4797608956878471275, guid: de6977c66cca61840b1e67cfff5f5202, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -1147,6 +1161,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8653665055746679455, guid: de6977c66cca61840b1e67cfff5f5202, type: 3}
+      propertyPath: _runCollider
+      value: 
+      objectReference: {fileID: 1120989051}
+    - target: {fileID: 8653665055746679455, guid: de6977c66cca61840b1e67cfff5f5202, type: 3}
+      propertyPath: _sliderCollider
+      value: 
+      objectReference: {fileID: 776489609}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

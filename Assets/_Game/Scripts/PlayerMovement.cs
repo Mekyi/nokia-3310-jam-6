@@ -20,6 +20,12 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] 
     private float _jumpVelocity = 15f;
+
+    [SerializeField] 
+    private BoxCollider2D _runCollider;
+    
+    [SerializeField] 
+    private BoxCollider2D _sliderCollider;
     
     private bool _pressedJump;
     private bool _isGrounded;
@@ -34,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         GetInput();
         JumpWhenInput();
         SlideWhenInput();
+        ToggleTriggerColliders();
     }
 
 
@@ -87,5 +94,11 @@ public class PlayerMovement : MonoBehaviour
     {
         _pressedJump = Input.GetKeyDown(KeyCode.Space);
         _isSliding = Input.GetKey(KeyCode.S);
+    }
+
+    private void ToggleTriggerColliders()
+    {
+        _runCollider.enabled = !_isSliding;
+        _sliderCollider.enabled = _isSliding;
     }
 }
