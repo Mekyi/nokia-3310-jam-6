@@ -15,10 +15,15 @@ public class MovingEntity : MonoBehaviour
     private void Update()
     {
         var position = transform.position;
+
+        if (GameManager.Instance.IsGameRunning == false)
+        {
+            return;
+        }
         
         var newPosition = Time.timeScale == 0f
                 ? new Vector3(position.x, position.y, position.z)
-                : new Vector3(position.x, position.y, position.z) + Vector3.left * _speed;
+                : new Vector3(position.x, position.y, position.z) + Vector3.left * (_speed * Time.deltaTime);
 
         transform.position = newPosition;
     }

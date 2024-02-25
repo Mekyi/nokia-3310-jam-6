@@ -1140,6 +1140,18 @@ PrefabInstance:
       propertyPath: _buttonPromptText
       value: 
       objectReference: {fileID: 631494470}
+    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: _speedDifficultyModifiers.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: _speedDifficultyModifiers.Array.data[1]
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: _speedDifficultyModifiers.Array.data[2]
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

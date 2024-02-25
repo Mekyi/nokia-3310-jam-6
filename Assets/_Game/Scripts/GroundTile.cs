@@ -12,13 +12,6 @@ public class GroundTile : MonoBehaviour
     [field: SerializeField]
     public Transform RightPosition {get; private set; }
 
-    private BoxCollider2D _tileTrigger;
-
-    private void Awake()
-    {
-        _tileTrigger = GetComponent<BoxCollider2D>();
-    }
-
     private void FixedUpdate()
     {
         bool isPastScreen = CheckIfPastScreen();
