@@ -136,8 +136,8 @@ public class GameManager : MonoBehaviour
     private IEnumerator InitiateRestartGame()
     {
         _gameRestarting = true;
-        _scoreText.gameObject.SetActive(false);
         yield return new WaitForSecondsRealtime(2f);
+        _scoreText.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         _gameRestarting = false;
     }
