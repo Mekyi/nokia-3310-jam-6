@@ -13,6 +13,9 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField]
     public EventReference GameOver { get; private set; }
 
+    [field: SerializeField]
+    public EventReference MainMenu { get; private set; }
+    
     public static FMODEvents Instance { get; private set; }
 
     private void Awake()

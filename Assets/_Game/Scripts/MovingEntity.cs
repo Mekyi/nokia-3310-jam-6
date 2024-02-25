@@ -12,7 +12,7 @@ public class MovingEntity : MonoBehaviour
         _speed = GameManager.Instance.SpriteSpeed;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         var position = transform.position;
 

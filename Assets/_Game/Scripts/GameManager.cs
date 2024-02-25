@@ -50,7 +50,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        Application.targetFrameRate = 15;
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 16;
         SetGameSpeed(0f);
     }
 

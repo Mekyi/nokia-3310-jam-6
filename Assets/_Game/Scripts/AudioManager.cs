@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
 
     private List<EventInstance> _eventInstances;
     private List<StudioEventEmitter> _studioEventEmitters;
+    private EventInstance _soundInstance;
 
     private void Awake()
     {
@@ -31,7 +32,14 @@ public class AudioManager : MonoBehaviour
 
     public void PlayOneShot(EventReference sound, Vector3 worldPosition)
     {
-        RuntimeManager.PlayOneShot(sound, worldPosition);
+        _soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        _soundInstance = RuntimeManager.CreateInstance(sound);
+        _soundInstance.start();
+    }
+
+    public void StopInstance()
+    {
+        _soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
     public EventInstance CreateInstance(EventReference eventReference)
