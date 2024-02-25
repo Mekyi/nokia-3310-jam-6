@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
         {
             _unscaledGameTimer += Time.unscaledDeltaTime;
             CheckDifficulty();
+            SetScore();
         }
     }
 
@@ -104,6 +105,7 @@ public class GameManager : MonoBehaviour
 
     private void OnPlayerDeath()
     {
+        IsGameRunning = false;
         SetGameSpeed(0f);
     }
 
@@ -111,5 +113,12 @@ public class GameManager : MonoBehaviour
     {
         GameSpeed = gameSpeed;
         Time.timeScale = gameSpeed;
+    }
+
+    private void SetScore()
+    {
+        var newScoreText = Mathf.RoundToInt(_unscaledGameTimer * 10f).ToString("D5");
+
+        _scoreText.text = $"<mspace=6>{newScoreText}</mspace>";
     }
 }

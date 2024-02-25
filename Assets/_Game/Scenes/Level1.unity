@@ -775,7 +775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SCORE 000000
+  m_text: 00000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bacd568c0e2689b4280de35d595ad22b, type: 2}
   m_sharedMaterial: {fileID: -3025729190354216368, guid: bacd568c0e2689b4280de35d595ad22b, type: 2}
@@ -1136,6 +1136,10 @@ PrefabInstance:
       propertyPath: _scoreText
       value: 
       objectReference: {fileID: 1294482932}
+    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: _pointsPerSecond
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
       propertyPath: _buttonPromptText
       value: 
