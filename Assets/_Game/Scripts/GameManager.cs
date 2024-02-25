@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
 
     private float _unscaledGameTimer = 0;
 
+    private bool _gameRestarting = false;
+
     private void Awake()
     {
         if (Instance != null)
@@ -47,43 +50,51 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        // Application.targetFrameRate = 15;
+        Application.targetFrameRate = 15;
         SetGameSpeed(0f);
+        // OnSceneLoaded();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X))
-        {
-            SetupGame();
-        }
-
         if (IsGameRunning)
         {
             _unscaledGameTimer += Time.unscaledDeltaTime;
             CheckDifficulty();
             SetScore();
         }
+        else if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) && !_gameRestarting)
+        {
+            StartRound();
+        }
     }
 
     private void OnEnable()
     {
         PlayerHitDetector.OnPlayerDeath += OnPlayerDeath;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     
     private void OnDisable()
     {
         PlayerHitDetector.OnPlayerDeath -= OnPlayerDeath;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     
-    private void SetupGame()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        IsGameRunning = false;
+        _unscaledGameTimer = 0f;
+        _currentDifficulty = 0;
+        _buttonPromptText.gameObject.SetActive(true);
+    }
+
+    private void StartRound()
+    {
+        IsGameRunning = true;
         SetGameSpeed(1f);
         _buttonPromptText.gameObject.SetActive(false);
         _scoreText.gameObject.SetActive(true);
-        _unscaledGameTimer = 0f;
-        _currentDifficulty = 0;
-        IsGameRunning = true;
     }
     
     private void CheckDifficulty()
@@ -107,6 +118,7 @@ public class GameManager : MonoBehaviour
     {
         IsGameRunning = false;
         SetGameSpeed(0f);
+        StartCoroutine(InitiateRestartGame());
     }
 
     private void SetGameSpeed(float gameSpeed)
@@ -120,5 +132,15 @@ public class GameManager : MonoBehaviour
         var newScoreText = Mathf.RoundToInt(_unscaledGameTimer * 10f).ToString("D5");
 
         _scoreText.text = $"<mspace=6>{newScoreText}</mspace>";
+    }
+
+    private IEnumerator InitiateRestartGame()
+    {
+        _gameRestarting = true;
+        _scoreText.gameObject.SetActive(false);
+        yield return new WaitForSecondsRealtime(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        _gameRestarting = false;
+        // OnSceneLoaded();
     }
 }
