@@ -41,6 +41,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.IsGameRunning == false)
+        {
+            return;
+        }
+        
         GetInput();
         if (_isGrounded && _holdingFly)
         {
@@ -54,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.Instance.IsGameRunning == false)
+        {
+            return;
+        }
+        
         CheckGround();
         CheckSlide();
         CheckHeight();

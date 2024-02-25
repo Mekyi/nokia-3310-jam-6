@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             CheckDifficulty();
             SetScore();
         }
-        else if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) && !_gameRestarting)
+        else if ((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X)) && !_gameRestarting)
         {
             StartRound();
         }
@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
 
     private void OnPlayerDeath()
     {
+        _gameRestarting = true;
         IsGameRunning = false;
         SetGameSpeed(0f);
         AudioManager.Instance.PlayOneShot(FMODEvents.Instance.GameOver, transform.position);
@@ -136,7 +137,6 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator InitiateRestartGame()
     {
-        _gameRestarting = true;
         yield return new WaitForSecondsRealtime(2f);
         _scoreText.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
