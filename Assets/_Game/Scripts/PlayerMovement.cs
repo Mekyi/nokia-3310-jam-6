@@ -43,11 +43,6 @@ public class PlayerMovement : MonoBehaviour
         CheckSlide();
     }
 
-    private void CheckSlide()
-    {
-        _animator.SetBool(IsSlidingAnimationParameter, _isSliding);
-    }
-
     private void JumpWhenInput()
     {
         if (!_pressedJump || !_isGrounded)
@@ -81,6 +76,11 @@ public class PlayerMovement : MonoBehaviour
             ).Length > 0;
         
         _animator.SetBool(IsGroundedAnimationParameter, _isGrounded);
+    }
+    
+    private void CheckSlide()
+    {
+        _animator.SetBool(IsSlidingAnimationParameter, _isSliding);
     }
     
     private void GetInput()
