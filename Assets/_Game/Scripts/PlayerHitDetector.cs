@@ -13,6 +13,10 @@ public class PlayerHitDetector : MonoBehaviour
     
     [SerializeField] 
     private OnTriggerEnterBroadcaster _slideColliderTrigger;
+    
+    [SerializeField] 
+    private GameObject _playerSpriteObject;
+    
     private LayerMask _enemyLayerMask;
 
     private void OnEnable()
@@ -31,5 +35,7 @@ public class PlayerHitDetector : MonoBehaviour
     {
         OnPlayerDeath?.Invoke();
         Debug.Log("Death");
+        var blinker = _playerSpriteObject.AddComponent<SpriteBlinker>();
+        blinker.SetInterval(0.4f);
     }
 }

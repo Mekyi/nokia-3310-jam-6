@@ -464,3 +464,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _runColliderTrigger: {fileID: 8115269010012714933}
   _slideColliderTrigger: {fileID: 4037796611939612132}
+  _playerSpriteObject: {fileID: 7118345757247901212}
