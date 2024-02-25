@@ -207,7 +207,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6991324414637462254}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -420,6 +420,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   _jumpVelocity: 17
+  _runCollider: {fileID: 2553653812695756816}
+  _sliderCollider: {fileID: 1056953658642416345}
 --- !u!50 &157830505338587191
 Rigidbody2D:
   serializedVersion: 4
@@ -445,7 +447,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 5
 --- !u!114 &1692642357094625601
 MonoBehaviour:

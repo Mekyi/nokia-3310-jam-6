@@ -16,7 +16,9 @@ public class MovingEntity : MonoBehaviour
     {
         var position = transform.position;
         
-        var newPosition = new Vector3(position.x, position.y, position.z) + Vector3.left * _speed;
+        var newPosition = Time.timeScale == 0f
+                ? new Vector3(position.x, position.y, position.z)
+                : new Vector3(position.x, position.y, position.z) + Vector3.left * _speed;
 
         transform.position = newPosition;
     }
