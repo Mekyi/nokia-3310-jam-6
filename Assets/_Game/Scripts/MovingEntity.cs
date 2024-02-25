@@ -20,4 +20,19 @@ public class MovingEntity : MonoBehaviour
 
         transform.position = newPosition;
     }
+    
+    private void OnEnable()
+    {
+        PlayerHitDetector.OnPlayerDeath += OnPlayerDeath;
+    }
+
+    private void OnDisable()
+    {
+        PlayerHitDetector.OnPlayerDeath -= OnPlayerDeath;
+    }
+    
+    private void OnPlayerDeath()
+    {
+        this.enabled = false;
+    }
 }
