@@ -557,6 +557,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: _difficultyChangeInterval
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: _speedDifficultyModifiers.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: _speedDifficultyModifiers.Array.data[3]
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: _speedDifficultyModifiers.Array.data[4]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: _speedDifficultyModifiers.Array.data[5]
+      value: 2.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6616488692401973095, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -576,7 +596,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4250999872718889051, guid: 15028c1daa62da647ba9f8167dea182d, type: 3}
       propertyPath: _spawnInterval
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6136645499228826836, guid: 15028c1daa62da647ba9f8167dea182d, type: 3}
       propertyPath: m_Name
