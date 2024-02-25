@@ -23,23 +23,29 @@ public class PlayerMovement : MonoBehaviour
     
     private bool _pressedJump;
     private bool _isGrounded;
+    private bool _isSliding;
     
     private static readonly int IsGroundedAnimationParameter = Animator.StringToHash("isGrounded");
+    private static readonly int IsSlidingAnimationParameter = Animator.StringToHash("isSliding");
+
 
     private void Update()
     {
         GetInput();
         JumpWhenInput();
+        SlideWhenInput();
     }
-    
+
+
     private void FixedUpdate()
     {
         CheckGround();
+        CheckSlide();
     }
 
-    private void GetInput()
+    private void CheckSlide()
     {
-        _pressedJump = Input.GetKeyDown(KeyCode.Space);
+        _animator.SetBool(IsSlidingAnimationParameter, _isSliding);
     }
 
     private void JumpWhenInput()
@@ -51,6 +57,16 @@ public class PlayerMovement : MonoBehaviour
         
         _isGrounded = false;
         _rigidbody2D.velocity = new Vector2(0f, _jumpVelocity);
+    }
+    
+    private void SlideWhenInput()
+    {
+        if (_pressedJump || _isGrounded)
+        {
+            return;
+        }
+
+        _isSliding = true;
     }
 
     private void CheckGround()
@@ -65,5 +81,11 @@ public class PlayerMovement : MonoBehaviour
             ).Length > 0;
         
         _animator.SetBool(IsGroundedAnimationParameter, _isGrounded);
+    }
+    
+    private void GetInput()
+    {
+        _pressedJump = Input.GetKeyDown(KeyCode.Space);
+        _isSliding = Input.GetKey(KeyCode.S);
     }
 }
