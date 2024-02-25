@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private bool _banksLoaded = false;
+    
     private void Start()
     {
-        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.MainMenu, transform.position);
+        StartCoroutine(WaitForBanksToLoad());
     }
 
     private void Update()
@@ -18,5 +20,20 @@ public class MainMenu : MonoBehaviour
             AudioManager.Instance.StopInstance();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+    }
+
+    private IEnumerator WaitForBanksToLoad()
+    {
+        while (_banksLoaded == false)
+        {
+            if (FMODUnity.RuntimeManager.HaveAllBanksLoaded)
+            {
+                _banksLoaded = true;
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
+        
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.MainMenu, transform.position);
     }
 }
