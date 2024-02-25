@@ -422,6 +422,7 @@ MonoBehaviour:
   _jumpVelocity: 17
   _runCollider: {fileID: 2553653812695756816}
   _sliderCollider: {fileID: 1056953658642416345}
+  _heightLimiter: {fileID: 0}
 --- !u!50 &157830505338587191
 Rigidbody2D:
   serializedVersion: 4

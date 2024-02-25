@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
 
         Application.targetFrameRate = 15;
         SetGameSpeed(0f);
-        // OnSceneLoaded();
     }
 
     private void Update()
@@ -141,6 +140,5 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         _gameRestarting = false;
-        // OnSceneLoaded();
     }
 }

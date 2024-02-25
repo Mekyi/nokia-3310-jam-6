@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &393363384 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6196480225413882826, guid: 30b3eeef81878c249be9e772690e3e9b, type: 3}
+  m_PrefabInstance: {fileID: 7645872509160750820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,10 +425,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6636894517876862443, guid: de6977c66cca61840b1e67cfff5f5202, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.72
+      objectReference: {fileID: 0}
     - target: {fileID: 7872020126090499564, guid: de6977c66cca61840b1e67cfff5f5202, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8653665055746679455, guid: de6977c66cca61840b1e67cfff5f5202, type: 3}
+      propertyPath: _heightLimiter
+      value: 
+      objectReference: {fileID: 393363384}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -497,6 +510,12 @@ PrefabInstance:
     - target: {fileID: 2241217782044864903, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
       propertyPath: m_Name
       value: DontDestroyOnLoad
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846835750121343902, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
+      propertyPath: m_text
+      value: 'HOLD Z TO JUMP
+
+        HOLD X TO SLIDE'
       objectReference: {fileID: 0}
     - target: {fileID: 3519815029674076824, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -619,6 +638,14 @@ PrefabInstance:
     - target: {fileID: 5444103438751715393, guid: 30b3eeef81878c249be9e772690e3e9b, type: 3}
       propertyPath: m_Name
       value: Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196480225413882826, guid: 30b3eeef81878c249be9e772690e3e9b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196480225413882826, guid: 30b3eeef81878c249be9e772690e3e9b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8471917251803932902, guid: 30b3eeef81878c249be9e772690e3e9b, type: 3}
       propertyPath: <PastScreenTransform>k__BackingField

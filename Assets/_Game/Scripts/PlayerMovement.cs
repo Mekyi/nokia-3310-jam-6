@@ -26,9 +26,13 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] 
     private BoxCollider2D _sliderCollider;
+
+    [SerializeField] 
+    private Transform _heightLimiter;
     
-    private bool _pressedJump;
+    private bool _holdingFly;
     private bool _isGrounded;
+    private bool _holdingSlide;
     private bool _isSliding;
     
     private static readonly int IsGroundedAnimationParameter = Animator.StringToHash("isGrounded");
@@ -38,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         GetInput();
-        JumpWhenInput();
+        FlyWhenInput();
         SlideWhenInput();
         ToggleTriggerColliders();
     }
@@ -48,11 +52,12 @@ public class PlayerMovement : MonoBehaviour
     {
         CheckGround();
         CheckSlide();
+        CheckHeight();
     }
 
-    private void JumpWhenInput()
+    private void FlyWhenInput()
     {
-        if (!_pressedJump || !_isGrounded)
+        if (!_holdingFly)
         {
             return;
         }
@@ -63,8 +68,9 @@ public class PlayerMovement : MonoBehaviour
     
     private void SlideWhenInput()
     {
-        if (_pressedJump || _isGrounded)
+        if (_holdingFly || !_isGrounded || !_holdingSlide)
         {
+            _isSliding = false;
             return;
         }
 
@@ -92,13 +98,22 @@ public class PlayerMovement : MonoBehaviour
     
     private void GetInput()
     {
-        _pressedJump = Input.GetKeyDown(KeyCode.Space);
-        _isSliding = Input.GetKey(KeyCode.S);
+        _holdingFly = Input.GetKey(KeyCode.Space);
+        _holdingSlide = Input.GetKey(KeyCode.S);
     }
 
     private void ToggleTriggerColliders()
     {
         _runCollider.enabled = !_isSliding;
         _sliderCollider.enabled = _isSliding;
+    }
+
+    private void CheckHeight()
+    {
+        transform.position = new Vector3(
+            transform.position.x,
+            Mathf.Clamp(transform.position.y, -100f, _heightLimiter.position.y) ,
+            transform.position.z
+        );
     }
 }
