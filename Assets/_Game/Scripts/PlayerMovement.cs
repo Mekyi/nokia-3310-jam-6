@@ -98,8 +98,8 @@ public class PlayerMovement : MonoBehaviour
     
     private void GetInput()
     {
-        _holdingFly = Input.GetKey(KeyCode.Space);
-        _holdingSlide = Input.GetKey(KeyCode.S);
+        _holdingFly = Input.GetKey(KeyCode.Z);
+        _holdingSlide = Input.GetKey(KeyCode.X);
     }
 
     private void ToggleTriggerColliders()
