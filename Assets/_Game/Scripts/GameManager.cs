@@ -117,6 +117,7 @@ public class GameManager : MonoBehaviour
     {
         IsGameRunning = false;
         SetGameSpeed(0f);
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.GameOver, transform.position);
         StartCoroutine(InitiateRestartGame());
     }
 

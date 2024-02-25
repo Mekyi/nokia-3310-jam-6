@@ -516,12 +516,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DontDestroyOnLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 2846835750121343902, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
-      propertyPath: m_text
-      value: 'HOLD Z TO FLY
-
-        HOLD X TO SLIDE'
-      objectReference: {fileID: 0}
     - target: {fileID: 3519815029674076824, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -560,30 +554,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3519815029674076824, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
-      propertyPath: _difficultyChangeInterval
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
-      propertyPath: _speedDifficultyModifiers.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
-      propertyPath: _speedDifficultyModifiers.Array.data[3]
-      value: 1.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
-      propertyPath: _speedDifficultyModifiers.Array.data[4]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5868018988633531344, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
-      propertyPath: _speedDifficultyModifiers.Array.data[5]
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616488692401973095, guid: d19647f4821b9884b90e1c5db69a27f3, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

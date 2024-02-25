@@ -51,7 +51,10 @@ MonoBehaviour:
   - 1
   - 1.25
   - 1.5
-  _difficultyChangeInterval: 20
+  - 1.75
+  - 2
+  - 2.25
+  _difficultyChangeInterval: 15
 --- !u!1 &1406893274495981898
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +233,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1870238810696411006}
+  - {fileID: 952207945306983339}
   - {fileID: 8937975538622443260}
   - {fileID: 1882512090418246577}
   m_Father: {fileID: 0}
@@ -311,7 +315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PRESS Z TO JUMP
+  m_text: 'HOLD Z TO FLY
 
     HOLD X TO SLIDE'
   m_isRightToLeft: 0
@@ -382,6 +386,51 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &4264498210706552974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 952207945306983339}
+  - component: {fileID: 280940703692629358}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &952207945306983339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4264498210706552974}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 412430360205450678}
+  m_Father: {fileID: 3519815029674076824}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &280940703692629358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4264498210706552974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7224304fe8f015d4cbe522c0c923e833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4779096325100855747
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +633,64 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &7268850376197842243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412430360205450678}
+  - component: {fileID: 6882345864791470359}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412430360205450678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7268850376197842243}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 952207945306983339}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6882345864791470359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7268850376197842243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d412eb526dfdfb54c9d67769c2e19019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Jump>k__BackingField:
+    Guid:
+      Data1: -582734292
+      Data2: 1159578655
+      Data3: 771854996
+      Data4: 1527440813
+    Path: event:/Sounds/Jump
+  <GameOver>k__BackingField:
+    Guid:
+      Data1: 855184723
+      Data2: 1087689593
+      Data3: 989739678
+      Data4: 978293863
+    Path: event:/Sounds/GameOver
 --- !u!1 &8098292367016075925
 GameObject:
   m_ObjectHideFlags: 0

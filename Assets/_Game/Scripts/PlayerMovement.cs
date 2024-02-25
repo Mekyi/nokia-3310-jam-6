@@ -42,6 +42,10 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         GetInput();
+        if (_isGrounded && _holdingFly)
+        {
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.Jump, transform.position);
+        }
         FlyWhenInput();
         SlideWhenInput();
         ToggleTriggerColliders();
